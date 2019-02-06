@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage('Test') {
-            agent { docker maven '3.6' }
+            agent { docker maven '3.6.0' }
             steps {
                 echo 'Running UnitTest'
                 sh 'mvn clean test'
