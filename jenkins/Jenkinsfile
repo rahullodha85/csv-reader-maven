@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven 'Maven 3.6.0'
+        maven 'm3'
         jdk 'jdk8'
     }
     stages {
@@ -14,7 +14,6 @@ pipeline {
             }
         }
         stage('Test') {
-            agent { docker maven '3.6.0' }
             steps {
                 echo 'Running UnitTest'
                 mvn 'mvn clean test'
