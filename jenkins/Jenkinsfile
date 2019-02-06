@@ -19,5 +19,11 @@ pipeline {
                 sh 'mvn clean test'
             }
         }
+        stage('Package') {
+            steps {
+                echo 'Running maven package'
+                sh 'mvn clean package'
+            }
+        }
     }
 }
